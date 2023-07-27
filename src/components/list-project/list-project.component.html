@@ -1,0 +1,65 @@
+<div class="row col-12" style="padding-left: 20px">
+  <ng-container *ngIf="!isProjectPage">
+
+    <ng-container *ngFor="let item of projects;">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding: 10px; padding-right: 0;">
+        <div class="item">
+          <div class="col-item">
+            <div class="item-inner">
+              <div class="">
+                <div class="" [routerLink]="item?.link">
+                  <a [routerLink]="item?.link" class="" [title]="item?.title">
+                    <img class="lazyload loaded w-100" height="250" [src]="item.imgUrl" [alt]="item?.title" fill="">
+                  </a>
+                </div>
+              </div>
+              <div class="item-info" style="background: #eee;">
+                <a class="item-cate"
+                   style="text-decoration: none; font-size: 25px; text-transform: uppercase; color: #ccb78f;"
+                   [routerLink]="item?.link" [title]="item?.type">{{item?.type}}</a>
+                <h2 class="item-title"><a [routerLink]="item?.link" style="font-size: 25px;"
+                                          [title]="item?.title">{{item?.title}}</a></h2>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <ng-container *ngIf="isProjectPage">
+
+    <ng-container *ngFor="let item of projects;">
+      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" style="padding: 10px; padding-right: 0;">
+        <div class="item">
+          <div class="col-item">
+            <div class="item-inner">
+              <div class="">
+                <div class="" [routerLink]="item?.url">
+                  <a [routerLink]="item?.url" class="" [title]="item?.title">
+                    <img class="lazyload loaded w-100" height="250" [src]="item?.listImages[0]?.src"
+                         [alt]="item?.listImages[0]?.alt" fill="">
+                  </a>
+                </div>
+              </div>
+              <div class="item-info" >
+                <a class="item-cate"
+                   style="text-decoration: none; font-size: 25px; text-transform: uppercase; color: #ccb78f;"
+                   [routerLink]="item?.url" [title]="item?.type">{{item?.type}}</a>
+                <h2 class="item-title"><a [routerLink]="item?.url" style="font-size: 25px;"
+                                          [title]="item?.title">{{item?.title}}</a>
+                </h2>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+</div>
+
+
+

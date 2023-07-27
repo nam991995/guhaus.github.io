@@ -1,0 +1,103 @@
+<header id="hedix" >
+
+  <div style="background-color: #dddddd" class="container mb_c d-lg-none d-md-none">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 z-indexlogo">
+        <!-- Header Logo -->
+        <div class="logo">
+          <a title="CÔNG TY CỔ PHẦN GUHAUS" routerLink="/">
+
+            <img alt="CÔNG TY CỔ PHẦN GUHAUS" style="max-height: 100px;
+    padding: 1px 9px;"
+                 src="./assets/image/logo/11-LG-B-2.png">
+
+          </a>
+        </div>
+        <!-- mobile-menu -->
+        <div class="hidden-desktop" id="mobile-menu">
+          <div class="navmenu">
+            <div class="menutop">
+              <div class="toggle">
+                <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                  <mat-icon>view_list</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                  <button mat-menu-item routerLink="/">
+                    <mat-icon>home</mat-icon>
+                    <span>Trang chủ</span>
+                  </button>
+
+                  <button mat-menu-item routerLink="/about-us">
+                    <mat-icon>description</mat-icon>
+                    <span>Giới thiệu</span>
+                  </button>
+                  <button mat-menu-item routerLink="/project">
+                    <mat-icon>work</mat-icon>
+                    <span>Dự án</span>
+                  </button>
+                  <button mat-menu-item routerLink="/contact">
+                    <mat-icon>markunread</mat-icon>
+                    <span>Liên hệ</span>
+                  </button>
+                </mat-menu>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div style="background-color: #dddddd" class="na d-none d-lg-block d-md-block">
+    <div class="container-fluid mb_c">
+      <div class="row">
+        <div class="col-xs-12 mobi_bt">
+
+
+          <nav class="mb0">
+            <div class="nav-inner clearfix">
+
+              <ul id="nav" class=" nav_main">
+
+
+                <li class="level0 parent" [class.active]="active === '/'" ><a routerLink="/"><span>Trang chủ</span></a></li>
+
+
+                <li class="level0 parent drop-menu ">
+                </li>
+                <li class="level0 parent " [class.active]="active === '/about-us'"><a routerLink="/about-us"><span>Giới thiệu</span></a></li>
+                <li class="logo ">
+                  <a routerLink="/" class="logo-wrapper inline-block">
+                    <img alt="CÔNG TY CỔ PHẦN GUHAUS"
+                         src="./assets/image/logo/11-LG-B-2.png"
+                      height="80px"
+                    >
+                  </a>
+                </li>
+                <li class="level0 parent " [class.active]="active === '/project'"><a routerLink="/project"><span>Dự án</span></a></li>
+                <li class="level0 parent "></li>
+                <li class="level0 parent " [class.active]="active === '/contact'"><a [routerLink]="'contact'"><span>Liên hệ</span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="header_right">
+<!--            <a routerLink="https://www.facebook.com/GranddesignVietNam" target="_blank" title="Facebook"><i-->
+<!--              class="fa fa-facebook-official" aria-hidden="true"></i></a>-->
+<!--            <a routerLink="https://www.instagram.com/granddesignvietnam/" target="_blank" title="Instagram"><i-->
+<!--              class="fa fa-instagram" aria-hidden="true"></i></a>-->
+<!--            <a routerLink="https://www.youtube.com/channel/UCKRbkKsQDBhvLF8wTHNclKA" target="_blank" title="Youtube"><i-->
+<!--              class="fa fa-youtube-play" aria-hidden="true"></i></a>-->
+
+<!--            <a routerLink="mailto:granddesignvn@gmail.com" target="_blank" title=""><i class="fa fa-envelope"-->
+<!--                                                                                 aria-hidden="true"></i></a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</header>

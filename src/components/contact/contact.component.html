@@ -1,0 +1,39 @@
+<div class="container align-items-center">
+  <div class="offset-md-3 col-md-6 col-sm-12">
+    <h2 style="text-transform: uppercase">Liên hệ</h2>
+    <form [formGroup]="form">
+      <label for="name">Họ tên:</label>
+      <input formControlName="name" required type="text" id="name" placeholder="Nhập họ tên..">
+      <div *ngIf="nameControl?.invalid && nameControl?.touched" class="invalid">
+        <p  *ngIf="nameControl?.errors?.['required']">Vui lòng nhập họ tên</p>
+      </div>
+
+      <label for="phone">Số điện thoại</label>
+      <input formControlName="phone" required type="text" id="phone" placeholder="Nhập số điện thoại..">
+      <div *ngIf="phoneControl?.invalid && phoneControl?.touched" class="invalid">
+        <p  *ngIf="phoneControl?.errors?.['required']">Vui lòng nhập số điện thoại</p>
+      </div>
+      <label for="email">Email</label>
+      <input formControlName="email" type="text" id="email" placeholder="Nhập Email..">
+      <div *ngIf="emailControl?.invalid && emailControl?.touched" class="invalid">
+        <p  *ngIf="emailControl?.errors?.['email']">Vui lòng nhập email</p>
+        <p  *ngIf="emailControl?.errors?.['required']">Email không đúng định dạng</p>
+      </div>
+
+
+      <label for="address">Địa chỉ</label>
+      <input formControlName="address" type="text" id="address" placeholder="Nhập địa chỉ..">
+      <div *ngIf="addressControl?.invalid && addressControl?.touched" class="invalid">
+        <p  *ngIf="addressControl?.errors?.['required']">Vui lòng nhập địa chỉ</p>
+      </div>
+
+      <label for="message">Nội dung tin nhắn</label>
+      <textarea formControlName="message" id="message" placeholder="Nhập nội dung tin nhắn.."
+                style="height:150px"></textarea>
+      <div *ngIf="messageControl?.invalid && messageControl?.touched" class="invalid">
+        <p  *ngIf="messageControl?.errors?.['required']">Vui lòng nhập tin nhắn</p>
+      </div>
+      <input [disabled]="isSubmit" type="submit" value="Gửi" class="button" (click)="onSubmit()">
+    </form>
+  </div>
+</div>

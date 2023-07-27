@@ -1,0 +1,25 @@
+<app-list-project></app-list-project>
+<div class="instagram-guhaus text-center pb-2 col-md-10 col-sm-12 offset-md-1">
+  <h2 class="" style="text-transform: uppercase">
+    Follow Guhaus on Instagram
+  </h2>
+  <div class=" ">
+
+    <c-carousel [animate]="false" transition="crossfade">
+      <c-carousel-indicators></c-carousel-indicators>
+      <c-carousel-inner>
+        <c-carousel-item *ngFor="let slide of slides">
+          <img
+            [src]="slide.src"
+            alt="{{ slide.title }}"
+            class="d-block w-100"
+            style="min-height: 700px; max-height:700px"
+            loading="lazy"/>
+        </c-carousel-item>
+      </c-carousel-inner>
+      <c-carousel-control [routerLink] caption="Previous" direction="prev"></c-carousel-control>
+      <c-carousel-control [routerLink] caption="Next" direction="next"></c-carousel-control>
+    </c-carousel>
+  </div>
+
+</div>

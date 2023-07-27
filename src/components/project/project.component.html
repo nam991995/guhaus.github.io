@@ -1,0 +1,18 @@
+<div class="container text-center">
+  <h1 class="" style="text-transform: uppercase">{{project.title}}</h1>
+
+  <div class="content-project col-12">
+    <ng-container *ngIf="project?.listImages?.length! > 0">
+      <lightgallery [settings]="settings" [onInit]="onInit">
+        <a
+          *ngFor="let item of project?.listImages"
+          class="gallery-item"
+          [attr.href]="item.src"
+          [attr.data-lg-size]="item.size"
+        >
+          <img class="img-responsive pt-2" width="100%" src="{{ item.src }}" />
+        </a>
+      </lightgallery>
+    </ng-container>
+  </div>
+</div>
